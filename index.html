@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romano's Carvings</title>
+    <title>Romano's Carvings - Byzantine Iconography & Wood Carvings</title>
+    <meta name="description" content="Hand-carved wooden sculptures and Byzantine iconography by Dcn. Romanos">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="time-display">
+        December 12, 2024 11:55 AM CST
+    </div>
+
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -21,7 +26,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Romano's Carvings</h1>
-            <p>Hand-carved wooden sculptures</p>
+            <p>Exquisite Byzantine Iconography & Wood Carvings</p>
         </div>
     </section>
 
@@ -37,47 +42,59 @@
     <section id="about" class="about">
         <div class="about-content">
             <div class="about-text">
-                <h2>About</h2>
-                <p>Dcn. Romanos is an Orthodox Deacon with a love for Byzantine Iconography. He has been carving for about a decade. With his love for the liturgical arts and a passion for making things with his hands, he attempted to create carvings on his own.</p>
-                <p>He was then given the opportunity to attend a workshop under the tutelage of Jonathan Pageau (master carver and teacher) where he learned some of the fundamentals of icon carving. He continues to grow in his knowledge and love for byzantine iconography in all of its forms.</p>
-                <p>Dcn. Romanos has done commissions for churches and individuals and would welcome the opportunity to provide you with a liturgical commission.</p>
-                <p>His work includes: Carved Icons, Prosphora Stamps, Crosses, and more!</p>
-                <p>Feel free to reach out for your specific needs.</p>
-                <p class="payment-info">Payments or Donations can be given through Venmo @Ron-Slockett Or PayPal paypal.me/ronslockett</p>
+                <h2>About the Artist</h2>
+                <p>Dcn. Romanos is an Orthodox Deacon with a profound love for Byzantine Iconography. With over a decade of carving experience, he combines his devotion to liturgical arts with his passion for craftsmanship.</p>
+                <p>His journey was enriched by studying under master carver Jonathan Pageau, where he mastered the fundamentals of icon carving. Today, he continues to deepen his understanding and appreciation of Byzantine iconography in all its forms.</p>
+                <p>Dcn. Romanos creates commissioned pieces for churches and individuals, specializing in:</p>
+                <ul class="specialties">
+                    <li>Carved Icons</li>
+                    <li>Prosphora Stamps</li>
+                    <li>Liturgical Crosses</li>
+                    <li>Custom Religious Art</li>
+                </ul>
+                <div class="payment-info">
+                    <h3>Payment Options</h3>
+                    <p>Accept payments through:</p>
+                    <div class="payment-methods">
+                        <span><i class="fab fa-venmo"></i> Venmo: @Ron-Slockett</span>
+                        <span><i class="fab fa-paypal"></i> PayPal: paypal.me/ronslockett</span>
+                    </div>
+                </div>
             </div>
             <div class="profile-image">
-                <img src="assets/images/profile.jpg" alt="Dcn. Romanos">
+                <img src="assets/images/profile.jpg" alt="Dcn. Romanos at work" loading="lazy">
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out for your specific needs.</p>
+        <h2>Get in Touch</h2>
+        <p>Interested in commissioning a piece? Let's discuss your vision.</p>
         <div class="social-links">
-            <a href="#" class="contact-button" id="email-button">
+            <a href="#" class="contact-button" id="email-button" aria-label="Send email">
                 <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://www.facebook.com/RomanosCarvings/" class="contact-button" target="_blank">
+            <a href="https://www.facebook.com/RomanosCarvings/" class="contact-button" target="_blank" rel="noopener noreferrer" aria-label="Facebook page">
                 <i class="fab fa-facebook"></i>
             </a>
-            <a href="https://www.instagram.com/dcn.romanos/" class="contact-button" target="_blank">
+            <a href="https://www.instagram.com/dcn.romanos/" class="contact-button" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
 
-        <!-- Contact Form Modal -->
         <div id="contact-modal" class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close" aria-label="Close modal">&times;</span>
                 <form id="contact-form">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <input type="text" name="name" placeholder="Your Name" required aria-label="Your name">
+                    <input type="email" name="email" placeholder="Your Email" required aria-label="Your email">
+                    <textarea name="message" placeholder="Tell me about your project..." required aria-label="Your message"></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
