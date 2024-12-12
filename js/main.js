@@ -99,27 +99,45 @@ document.addEventListener('DOMContentLoaded', () => {
             const initialDisplay = 6; // Number of images to show initially
             let isExpanded = false;
             
-            // Create expand button
+            // Create expand button with caret
             const expandButton = document.createElement('button');
             expandButton.className = 'expand-gallery-btn';
-            expandButton.textContent = 'Show More';
+            expandButton.innerHTML = `
+                <span>Show More</span>
+                <i class="fas fa-caret-down"></i>
+            `;
             
             // Function to toggle gallery visibility
             const toggleGallery = () => {
+                isExpanded = !isExpanded;
                 const allItems = galleryGrid.querySelectorAll('.gallery-item');
+                
+                expandButton.classList.toggle('expanded');
+                expandButton.querySelector('span').textContent = isExpanded ? 'Show Less' : 'Show More';
+                
                 allItems.forEach((item, index) => {
                     if (index >= initialDisplay) {
-                        item.style.display = isExpanded ? 'block' : 'none';
+                        if (isExpanded) {
+                            item.style.display = 'block';
+                            // Trigger reflow
+                            void item.offsetWidth;
+                            item.classList.add('visible');
+                        } else {
+                            item.classList.remove('visible');
+                            setTimeout(() => {
+                                if (!isExpanded) {
+                                    item.style.display = 'none';
+                                }
+                            }, 500); // Match transition duration
+                        }
                     }
                 });
-                expandButton.textContent = isExpanded ? 'Show Less' : 'Show More';
-                isExpanded = !isExpanded;
             };
             
             // Load all images
             for (const [index, url] of imageUrls.entries()) {
                 const galleryItem = document.createElement('div');
-                galleryItem.className = 'gallery-item';
+                galleryItem.className = 'gallery-item' + (index < initialDisplay ? ' visible' : '');
                 if (index >= initialDisplay) {
                     galleryItem.style.display = 'none';
                 }
@@ -130,7 +148,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.loading = 'lazy';
                 
                 img.onload = () => {
-                    galleryItem.style.opacity = '1';
+                    if (index < initialDisplay) {
+                        galleryItem.classList.add('visible');
+                    }
                 };
                 
                 img.onerror = () => {
