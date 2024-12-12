@@ -3,35 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romano's Carvings - Byzantine Iconography & Wood Carvings</title>
-    <meta name="description" content="Hand-carved wooden sculptures and Byzantine iconography by Dcn. Romanos">
+    <title>Romanos Carvings - Byzantine Iconography & Liturgical Art</title>
+    <meta name="description" content="Handcrafted Byzantine iconography and liturgical art by Dcn. Romanos. Commissioned works for churches and individuals.">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="time-display">
-        December 12, 2024 11:55 AM CST
+        <!-- Time will be updated dynamically via JavaScript -->
     </div>
 
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+            <div class="nav-brand">RC</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Romano's Carvings</h1>
-            <p>Exquisite Byzantine Iconography & Wood Carvings</p>
+            <h1>Romanos Carvings</h1>
+            <p>Wood Carved Byzantine Iconography and Liturgical Art</p>
+            <a href="#gallery" class="cta-button">View Gallery</a>
         </div>
     </section>
 
     <section id="gallery" class="gallery">
-        <h2>Gallery of Work</h2>
+        <div class="section-header">
+            <h2>Gallery</h2>
+            <p class="subtitle">A collection of commissioned works and personal projects</p>
+        </div>
         <div class="gallery-container">
             <div class="gallery-grid">
                 <!-- Images will be loaded dynamically via JavaScript -->
@@ -42,58 +49,112 @@
     <section id="about" class="about">
         <div class="about-content">
             <div class="about-text">
-                <h2>About the Artist</h2>
-                <p>Dcn. Romanos is an Orthodox Deacon with a profound love for Byzantine Iconography. With over a decade of carving experience, he combines his devotion to liturgical arts with his passion for craftsmanship.</p>
-                <p>His journey was enriched by studying under master carver Jonathan Pageau, where he mastered the fundamentals of icon carving. Today, he continues to deepen his understanding and appreciation of Byzantine iconography in all its forms.</p>
-                <p>Dcn. Romanos creates commissioned pieces for churches and individuals, specializing in:</p>
-                <ul class="specialties">
-                    <li>Carved Icons</li>
-                    <li>Prosphora Stamps</li>
-                    <li>Liturgical Crosses</li>
-                    <li>Custom Religious Art</li>
-                </ul>
-                <div class="payment-info">
-                    <h3>Payment Options</h3>
-                    <p>Accept payments through:</p>
-                    <div class="payment-methods">
-                        <span><i class="fab fa-venmo"></i> Venmo: @Ron-Slockett</span>
-                        <span><i class="fab fa-paypal"></i> PayPal: paypal.me/ronslockett</span>
+                <div class="section-header">
+                    <h2>About the Artist</h2>
+                    <p class="subtitle">Crafting Sacred Art with Devotion</p>
+                </div>
+                <div class="about-description">
+                    <p>Dcn. Romanos is an Orthodox Deacon whose ministry extends into the realm of sacred art through Byzantine iconography and liturgical woodcarving. With over a decade of experience, he combines traditional techniques with deep theological understanding to create pieces that serve both liturgical function and spiritual contemplation.</p>
+                    <p>His journey in this sacred art form was enriched through study under master carver Jonathan Pageau, where he developed a profound understanding of the symbolic language and technical precision required in Orthodox iconography.</p>
+                </div>
+                <div class="specialties-section">
+                    <h3>Areas of Expertise</h3>
+                    <ul class="specialties">
+                        <li>Hand-Carved Icons</li>
+                        <li>Prosphora Stamps</li>
+                        <li>Liturgical Crosses</li>
+                        <li>Custom Religious Art</li>
+                    </ul>
+                </div>
+                <div class="commissions-section">
+                    <h3>Commission Information</h3>
+                    <p>Each piece is carefully crafted to serve its intended liturgical purpose while maintaining the highest standards of artistic excellence. Commissions are accepted for both churches and individuals.</p>
+                    <div class="payment-info">
+                        <h4>Payment Options</h4>
+                        <div class="payment-methods">
+                            <span><i class="fab fa-venmo"></i> Venmo: @Ron-Slockett</span>
+                            <span><i class="fab fa-paypal"></i> PayPal: paypal.me/ronslockett</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="profile-image">
                 <img src="assets/images/profile.jpg" alt="Dcn. Romanos at work" loading="lazy">
+                <div class="image-caption">Dcn. Romanos in his workshop</div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <p>Interested in commissioning a piece? Let's discuss your vision.</p>
+        <div class="section-header">
+            <h2>Get in Touch</h2>
+            <p class="subtitle">Discuss Your Commission</p>
+        </div>
+        <p class="contact-intro">Interested in commissioning a piece? Let's discuss your vision and create something meaningful together.</p>
         <div class="social-links">
             <a href="#" class="contact-button" id="email-button" aria-label="Send email">
                 <i class="fas fa-envelope"></i>
+                <span class="button-label">Email</span>
             </a>
             <a href="https://www.facebook.com/RomanosCarvings/" class="contact-button" target="_blank" rel="noopener noreferrer" aria-label="Facebook page">
                 <i class="fab fa-facebook"></i>
+                <span class="button-label">Facebook</span>
             </a>
             <a href="https://www.instagram.com/dcn.romanos/" class="contact-button" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
                 <i class="fab fa-instagram"></i>
+                <span class="button-label">Instagram</span>
             </a>
         </div>
 
         <div id="contact-modal" class="modal">
             <div class="modal-content">
                 <span class="close" aria-label="Close modal">&times;</span>
+                <h3>Contact Form</h3>
+                <p class="modal-subtitle">Share your vision with us</p>
                 <form id="contact-form">
-                    <input type="text" name="name" placeholder="Your Name" required aria-label="Your name">
-                    <input type="email" name="email" placeholder="Your Email" required aria-label="Your email">
-                    <textarea name="message" placeholder="Tell me about your project..." required aria-label="Your message"></textarea>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required aria-label="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required aria-label="Your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required aria-label="Your message" placeholder="Tell me about your project..."></textarea>
+                    </div>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Romanos Carvings</h3>
+                <p>Byzantine Iconography & Liturgical Art</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/RomanosCarvings/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/dcn.romanos/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Romanos Carvings. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
