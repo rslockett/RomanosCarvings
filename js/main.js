@@ -181,43 +181,50 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        const formData = new FormData(contactForm);
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalButtonText = submitButton.textContent;
         
         try {
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
-            
-            // Simulate form submission delay
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
-            // Show success message
-            const successMessage = document.createElement('div');
-            successMessage.className = 'success-message';
-            successMessage.textContent = 'Message sent successfully! We\'ll get back to you soon.';
-            successMessage.style.color = '#4CAF50';
-            successMessage.style.marginTop = '1rem';
-            successMessage.style.textAlign = 'center';
-            
-            contactForm.reset();
-            contactForm.appendChild(successMessage);
-            
-            // Remove success message after 3 seconds
-            setTimeout(() => {
-                successMessage.remove();
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }, 3000);
+
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Show success message
+                const successMessage = document.createElement('div');
+                successMessage.className = 'success-message';
+                successMessage.textContent = 'Message sent successfully! We\'ll get back to you soon.';
+                successMessage.style.color = '#4CAF50';
+                successMessage.style.marginTop = '1rem';
+                successMessage.style.textAlign = 'center';
+                
+                contactForm.reset();
+                contactForm.appendChild(successMessage);
+                
+                // Close modal after delay
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    successMessage.remove();
+                }, 3000);
+            } else {
+                throw new Error('Failed to send message');
+            }
         } catch (error) {
-            console.error('Error submitting form:', error);
+            console.error('Error sending message:', error);
             const errorMessage = document.createElement('div');
             errorMessage.className = 'error-message';
-            errorMessage.textContent = 'An error occurred. Please try again later.';
+            errorMessage.textContent = 'Failed to send message. Please try again.';
             errorMessage.style.color = '#f44336';
             errorMessage.style.marginTop = '1rem';
             errorMessage.style.textAlign = 'center';
-            
             contactForm.appendChild(errorMessage);
             
             setTimeout(() => {
