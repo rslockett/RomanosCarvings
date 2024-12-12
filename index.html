@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romano's Carvings</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Romano's Carvings</h1>
+            <p>Hand-carved wooden sculptures</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>Gallery of Work</h2>
+        <div class="gallery-container">
+            <div class="gallery-grid">
+                <!-- Images will be loaded dynamically via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About</h2>
+                <p>Dcn. Romanos is an Orthodox Deacon with a love for Byzantine Iconography. He has been carving for about a decade. With his love for the liturgical arts and a passion for making things with his hands, he attempted to create carvings on his own.</p>
+                <p>He was then given the opportunity to attend a workshop under the tutelage of Jonathan Pageau (master carver and teacher) where he learned some of the fundamentals of icon carving. He continues to grow in his knowledge and love for byzantine iconography in all of its forms.</p>
+                <p>Dcn. Romanos has done commissions for churches and individuals and would welcome the opportunity to provide you with a liturgical commission.</p>
+                <p>His work includes: Carved Icons, Prosphora Stamps, Crosses, and more!</p>
+                <p>Feel free to reach out for your specific needs.</p>
+                <p class="payment-info">Payments or Donations can be given through Venmo @Ron-Slockett Or PayPal paypal.me/ronslockett</p>
+            </div>
+            <div class="profile-image">
+                <img src="assets/images/profile.jpg" alt="Dcn. Romanos">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out for your specific needs.</p>
+        <div class="social-links">
+            <a href="#" class="contact-button" id="email-button">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.facebook.com/RomanosCarvings/" class="contact-button" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/dcn.romanos/" class="contact-button" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <!-- Contact Form Modal -->
+        <div id="contact-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
